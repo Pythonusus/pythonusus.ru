@@ -1,0 +1,23 @@
+/*
+Project wide styles and imports. Bootstrap is used as a starting point.
+
+fonts.css keeps all the font-face declarations.
+themes.css keeps all the theme variables.
+All other files keep the component-specific styles.
+*/
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("bootstrap-icons/font/bootstrap-icons.css");
+@import url("fonts.css");
+@import url("themes.css");
+@import url("components/header.css");
+@import url("components/utilities.css");
+@import url("components/card.css");
+@import url("components/link.css");
+@import url("components/hero.css");
+@import url("components/404.css");
+
+html,
+body {
+  font-family: Raleway, sans-serif;
+  background: var(--theme-bg);
+}

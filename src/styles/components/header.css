@@ -1,0 +1,55 @@
+#header {
+  background-color: var(--theme-header-bg);
+  border-color: var(--theme-header-border);
+  backdrop-filter: var(--theme-header-backdrop-filter, none);
+}
+
+.github-profile-link {
+  transform-origin: center;
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.github-profile-link:hover,
+.github-profile-link:focus-visible {
+  transform: rotate(-3deg) scale(1.1);
+}
+
+.header-link {
+  color: var(--theme-header-link);
+  transition: color 220ms ease;
+}
+
+.header-link:hover,
+.header-link:focus-visible {
+  color: var(--theme-header-link-hover);
+}
+
+.telegram-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  flex: 0 0 auto;
+  background-color: currentcolor;
+  mask-image: url("/assets/svg/telegram.svg");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+/* Used to disable animations when the user has requested reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .github-profile-link {
+    transition: none;
+  }
+
+  .header-link {
+    transition: none;
+  }
+
+  .github-profile-link:hover,
+  .github-profile-link:focus-visible {
+    transform: none;
+  }
+}

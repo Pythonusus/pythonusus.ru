@@ -1,0 +1,17 @@
+/* Override Bootstrap card component styles */
+.card {
+  background-color: var(--theme-card-bg);
+  border-color: var(--theme-card-border);
+  transition:
+    transform 220ms ease,
+    filter 220ms ease;
+}
+
+.card-hover:hover,
+.card-hover:focus-visible {
+  transform: scale(1.04);
+  filter: brightness(1.1);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+  border-color: var(--theme-card-border-hover);
+  background-color: var(--theme-card-bg-hover);
+}

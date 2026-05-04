@@ -1,0 +1,29 @@
+services:
+  app:
+    # Building the image
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: pythonusus.ru
+
+    # Port forwarding from host to container
+    ports:
+      - "127.0.0.1:${PORT:-8100}:8080"
+
+    # Restart service unless it was stopped manually
+    restart: "unless-stopped"
+
+    # Logging configuration
+    # Without this block Docker uses default settings:
+    #   - logs are stored indefinitely
+    #   - log files can fill up the disk
+    logging:
+      # Keep logs in JSON format
+      driver: "json-file"
+
+      options:
+        # Maximum size of one log file
+        max-size: "10m"
+        # Maximum number of log files
+        max-file: "3"

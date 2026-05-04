@@ -1,0 +1,11 @@
+/*  Custom link styles. Will not be using Bootstrap link styles. */
+.theme-link {
+  color: var(--theme-link);
+  text-decoration: underline 1px;
+  transition: color 220ms ease;
+}
+
+.theme-link:hover,
+.theme-link:focus-visible {
+  color: var(--theme-link-hover);
+}

@@ -1,0 +1,105 @@
+.hero-intro {
+  max-width: 44rem;
+}
+
+.hero-typing {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  position: relative;
+  min-height: 1.1em;
+  visibility: hidden;
+}
+
+.hero-typing::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  white-space: nowrap;
+  visibility: visible;
+  border-right: 0.08em solid currentcolor;
+  animation:
+    hero-typing-text 6s steps(1, end) infinite,
+    hero-caret 800ms step-end infinite;
+}
+
+.hero-photo {
+  width: min(320px, 68vw);
+  max-height: 320px;
+}
+
+.hero-actions {
+  min-width: 13rem;
+}
+
+@keyframes hero-typing-text {
+  0%,
+  2% {
+    content: "";
+  }
+
+  5% {
+    content: "П";
+  }
+
+  7% {
+    content: "Пр";
+  }
+
+  10% {
+    content: "При";
+  }
+
+  12% {
+    content: "Прив";
+  }
+
+  15% {
+    content: "Приве";
+  }
+
+  17% {
+    content: "Привет";
+  }
+
+  20%,
+  80% {
+    content: "Привет!";
+  }
+
+  85% {
+    content: "Привет";
+  }
+
+  88% {
+    content: "Приве";
+  }
+
+  91% {
+    content: "Прив";
+  }
+
+  94% {
+    content: "При";
+  }
+
+  97% {
+    content: "Пр";
+  }
+
+  99% {
+    content: "П";
+  }
+
+  100% {
+    content: "";
+  }
+}
+
+@keyframes hero-caret {
+  50% {
+    border-color: transparent;
+  }
+}

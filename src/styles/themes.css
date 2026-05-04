@@ -1,0 +1,74 @@
+:root,
+[data-theme="default"] {
+  --theme-bg:
+    radial-gradient(
+      48rem 32rem at 49% 27%,
+
+      rgb(98 162 235 / 42%) 0%,
+      rgb(98 162 235 / 20%) 34%,
+      rgb(98 162 235 / 8%) 56%,
+      rgb(98 162 235 / 0%) 86%
+    ),
+    radial-gradient(
+      38rem 34rem at 34% 58%,
+      rgb(44 52 198 / 42%) 0%,
+      rgb(44 52 198 / 22%) 38%,
+      rgb(44 52 198 / 9%) 58%,
+      rgb(44 52 198 / 0%) 88%
+    ),
+    radial-gradient(
+      42rem 36rem at 61% 62%,
+      rgb(218 50 112 / 46%) 0%,
+      rgb(218 50 112 / 24%) 36%,
+      rgb(218 50 112 / 10%) 58%,
+      rgb(218 50 112 / 0%) 88%
+    ),
+    radial-gradient(
+      65rem 50rem at -10% -5%,
+      rgb(133 8 93 / 30.9%) 50%,
+      rgb(159 40 113 / 0%) 100%
+    ),
+    radial-gradient(
+      50rem 40rem at 100% -10%,
+      rgb(255 0 123 / 17.1%) 0%,
+      rgb(0 210 255 / 0%) 66%
+    ),
+    radial-gradient(
+      30rem 50rem at 50% 100%,
+      rgb(138 84 255 / 7.4%) 15%,
+      rgb(127 67 255 / 1.5%) 62%
+    ),
+    linear-gradient(60deg, rgb(8 3 55) 20%, rgb(18 4 43) 100%);
+  --theme-surface: #130f30bd;
+  --theme-surface-soft: #17123a9e;
+  --theme-main: #0f2;
+  --theme-text: #f5f5f5;
+  --theme-text-muted: #cdc5ef;
+  --theme-border: #dfd2ff3d;
+  --theme-border-hover: #dfd2ff50;
+  --theme-link: #f5f5f5;
+  --theme-link-hover: #f5f5f5c9;
+
+  /* ---------------- HEADER ---------------- */
+  --theme-header-bg: #110a3642;
+  --theme-header-border: #dbd0ff47;
+  --theme-header-text: var(--theme-text);
+  --theme-header-link: var(--theme-link);
+  --theme-header-link-hover: var(--theme-link-hover);
+  --theme-header-backdrop-filter: blur(14px) saturate(145%);
+
+  /* ---------------- COMPONENTS ---------------- */
+  --theme-card-bg: var(--theme-surface);
+  --theme-card-bg-hover: var(--theme-surface-soft);
+  --theme-card-border: var(--theme-border);
+  --theme-card-border-hover: var(--theme-border-hover);
+  --theme-btn-primary-bg: var(--theme-primary);
+  --theme-btn-primary-border: var(--theme-primary);
+  --theme-btn-primary-hover-bg: var(--theme-primary-hover);
+  --theme-btn-primary-hover-border: var(--theme-primary-hover);
+
+  /* ---------------- BOOTSTRAP OVERRIDES ---------------- */
+  --bs-body-color: var(--theme-text);
+  --bs-secondary-color: var(--theme-text-muted);
+  --bs-border-color: var(--theme-border);
+}

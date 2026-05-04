@@ -1,0 +1,80 @@
+{
+  "name": "pythonusus.ru",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static website for listing my pet projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pythonusus/pythonusus.ru.git"
+  },
+  "author": "Petr Malafeev",
+  "license": "MIT",
+  "homepage": "https://pythonusus.ru",
+  "keywords": [
+    "website",
+    "portfolio",
+    "backend",
+    "python",
+    "fastapi",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap",
+    "Vite"
+  ],
+  "type": "module",
+  "engines": {
+    "node": "22.x",
+    "npm": "11.6.2"
+  },
+  "packageManager": "npm@11.6.2",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "lint:html": "eslint \"src/**/*.html\"",
+    "lint:css": "stylelint \"src/**/*.css\" --allow-empty-input",
+    "lint:js": "eslint \"src/**/*.js\"",
+    "lint:prettier": "prettier --check \"**/*.{html,css,js,json}\"",
+    "format:html": "eslint \"src/**/*.html\" --fix",
+    "format:css": "stylelint \"src/**/*.css\" --fix --allow-empty-input",
+    "format:js": "eslint \"src/**/*.js\" --fix",
+    "format:prettier": "prettier --write \"**/*.{html,css,js,json}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@html-eslint/eslint-plugin": "^0.60.0",
+    "@html-eslint/parser": "^0.60.0",
+    "eslint": "^10.3.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.7",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.10.0",
+    "stylelint-config-standard": "^40.0.0",
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
+  },
+  "lint-staged": {
+    "*.html": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.css": [
+      "stylelint --allow-empty-input",
+      "prettier --check"
+    ],
+    "*.js": [
+      "eslint",
+      "prettier --check"
+    ],
+    "*.json": [
+      "prettier --check"
+    ]
+  }
+}
